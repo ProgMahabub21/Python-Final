@@ -86,8 +86,8 @@ print("----------------- Group by Risk Factor -----------------")
 print(df.groupby('Risk Factor').size())
 
 # # remove unnecessary columns
-# df.drop(['Date of Admission ', 'Date of Discharge',
-#          'Date of Expired '], axis=1, inplace=True)
+df.drop(['Date of Admission ', 'Date of Discharge',
+         'Date of Expired ', 'Test1: RAT'], axis=1, inplace=True)
 
 
 # ---------------- Exploratory data analysis -----------------
@@ -121,7 +121,7 @@ plt.show()
 # Feature matrix
 
 X = df[['Age', 'S1: Fever', 'S2: Cough', 'S3: Joint Pain',
-        'Test2:RT PCR', 'Test4: CT Scan']]
+        'Test2:RT PCR', 'Test4: CT Scan ']]
 
 print("----------------- Feature Matrix -----------------")
 print(X.head())
